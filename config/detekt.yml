@@ -1,0 +1,35 @@
+build:
+  maxIssues: 0
+
+config: # Config checks the rules that we have set up in the detekt.yml file like are the rules present or not or we just just made up our rules??
+  validation: true # we could decide whether to give warnings or errors if the rules are wrong, if wrong then just apply the rules taht are correct
+  warningsAsErrors: false
+  excludes: ''
+
+complexity:
+  CyclomaticComplexMethod:
+    active: true
+    threshold: 10
+    excludes: '**/BMSTopBar.kt, **/BMSBottomBar.kt'
+    
+  LongMethod:
+    active: true
+    threshold: 60
+
+naming:
+  FunctionNaming:
+    active: true
+    functionPattern: '[a-z][a-zA-Z0-9]*'
+  VariableNaming: # enforce camel case
+    active: true
+  ClassNaming:
+    active: true
+
+style:
+  MagicNumber:
+    active: true
+    ignoreNumbers: ['-1', '0', '1', '2']
+  
+potential-bugs:
+  UnsafeCallOnNullableType:
+    active: true
