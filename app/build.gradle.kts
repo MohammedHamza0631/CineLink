@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.kotlin.compose)
     kotlin("kapt")
     kotlin("plugin.serialization") version "2.0.21"
+    id("io.gitlab.arturbosch.detekt")
 }
 
 android {
@@ -84,4 +85,38 @@ dependencies {
 
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+}
+
+// Detekt Configuration
+detekt {
+    buildUponDefaultConfig = true
+    allRules = false
+}
+
+// Custom Detekt task
+tasks.register<io.gitlab.arturbosch.detekt.Detekt>("detektCustom") {
+    description = "Runs Detekt with custom config"
+    buildUponDefaultConfig = false
+    allRules = false
+    parallel = true
+    autoCorrect = false
+    ignoreFailures = false
+    setSource(files("src"))
+    config.setFrom(files("$rootDir/config/detekt/detekt.yml"))
+    baseline.set(file("$rootDir/config/detekt/baseline.xml"))
+    include("**/*.kt", "**/*.kts")
+    exclude("**/build/**")
+}
+
+// Task to create baseline
+val detektProjectBaseline by tasks.registering(io.gitlab.arturbosch.detekt.DetektCreateBaselineTask::class) {
+    description = "Creates baseline for the project"
+    buildUponDefaultConfig.set(false)
+    ignoreFailures.set(true)
+    parallel.set(true)
+    setSource(files("src"))
+    config.setFrom(files("$rootDir/config/detekt/detekt.yml"))
+    baseline.set(file("$rootDir/config/detekt/baseline.xml"))
+    include("**/*.kt", "**/*.kts")
+    exclude("**/build/**")
 }

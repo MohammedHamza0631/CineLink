@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <SmellBaseline>
-  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <ManuallySuppressedIssues/>
   <CurrentIssues>
     <ID>ConstructorParameterNaming:CreditsResponseDto.kt$CastDto$val profile_path: String?</ID>
     <ID>CyclomaticComplexMethod:BMSNavigation.kt$@Composable fun BMSNavigation()</ID>
@@ -38,101 +38,32 @@
     <ID>ImplicitDefaultLocale:MovieDetailScreen.kt$String.format("%.1fK", movieDetails.movie.voteCount / 1000.0)</ID>
     <ID>ImplicitDefaultLocale:TicketDetailScreen.kt$String.format("%.2f", ticket.totalAmount)</ID>
     <ID>ImplicitDefaultLocale:TicketsScreen.kt$String.format("%.0f", ticket.totalAmount)</ID>
-    <ID>InvalidPackageDeclaration:AppModule.kt$package com.cinelink.app.di</ID>
-    <ID>InvalidPackageDeclaration:BMSApplication.kt$package com.cinelink.app</ID>
-    <ID>InvalidPackageDeclaration:BMSBottomBar.kt$package com.cinelink.app.presentation.ui.components.common</ID>
-    <ID>InvalidPackageDeclaration:BMSDatabase.kt$package com.cinelink.app.data.local.database</ID>
-    <ID>InvalidPackageDeclaration:BMSNavigation.kt$package com.cinelink.app.presentation.ui.navigation</ID>
-    <ID>InvalidPackageDeclaration:BMSTopBar.kt$package com.cinelink.app.presentation.ui.components.common</ID>
-    <ID>InvalidPackageDeclaration:BookingIntent.kt$package com.cinelink.app.presentation.intents</ID>
-    <ID>InvalidPackageDeclaration:BookingScreen.kt$package com.cinelink.app.presentation.ui.screens</ID>
-    <ID>InvalidPackageDeclaration:BookingState.kt$package com.cinelink.app.presentation.states</ID>
-    <ID>InvalidPackageDeclaration:BookingViewModel.kt$package com.cinelink.app.presentation.viewmodels</ID>
-    <ID>InvalidPackageDeclaration:BottomNavItem.kt$package com.cinelink.app.presentation.ui.navigation</ID>
-    <ID>InvalidPackageDeclaration:BottomSheet.kt$package com.cinelink.app.presentation.ui.components.common</ID>
-    <ID>InvalidPackageDeclaration:Cast.kt$package com.cinelink.app.domain.model</ID>
-    <ID>InvalidPackageDeclaration:Color.kt$package com.cinelink.app.presentation.ui.theme</ID>
-    <ID>InvalidPackageDeclaration:Constants.kt$package com.cinelink.app.utils</ID>
-    <ID>InvalidPackageDeclaration:CreditsResponseDto.kt$package com.cinelink.app.data.remote.dto</ID>
-    <ID>InvalidPackageDeclaration:DeleteTicketUseCase.kt$package com.cinelink.app.domain.usecases.ticket</ID>
-    <ID>InvalidPackageDeclaration:DeleteTicketUseCaseTest.kt$package com.cinelink.app</ID>
-    <ID>InvalidPackageDeclaration:GetAllTicketsUseCase.kt$package com.cinelink.app.domain.usecases.ticket</ID>
-    <ID>InvalidPackageDeclaration:GetAllTicketsUseCaseTest.kt$package com.cinelink.app</ID>
-    <ID>InvalidPackageDeclaration:GetMovieDetailsUseCase.kt$package com.cinelink.app.domain.usecases.movie</ID>
-    <ID>InvalidPackageDeclaration:GetMovieDetailsUseCaseTest.kt$package com.cinelink.app</ID>
-    <ID>InvalidPackageDeclaration:GetMovieReviewsUseCase.kt$package com.cinelink.app.domain.usecases.movie</ID>
-    <ID>InvalidPackageDeclaration:GetMovieReviewsUseCaseTest.kt$package com.cinelink.app</ID>
-    <ID>InvalidPackageDeclaration:GetNowPlayingMoviesUseCase.kt$package com.cinelink.app.domain.usecases.movie</ID>
-    <ID>InvalidPackageDeclaration:GetNowPlayingMoviesUseCaseTest.kt$package com.cinelink.app</ID>
-    <ID>InvalidPackageDeclaration:GetPopularMoviesUseCase.kt$package com.cinelink.app.domain.usecases.movie</ID>
-    <ID>InvalidPackageDeclaration:GetPopularMoviesUseCaseTest.kt$package com.cinelink.app</ID>
-    <ID>InvalidPackageDeclaration:GetTicketByIdUseCase.kt$package com.cinelink.app.domain.usecases.ticket</ID>
-    <ID>InvalidPackageDeclaration:GetTicketByIdUseCaseTest.kt$package com.cinelink.app</ID>
-    <ID>InvalidPackageDeclaration:HomeIntent.kt$package com.cinelink.app.presentation.intents</ID>
-    <ID>InvalidPackageDeclaration:HomeScreen.kt$package com.cinelink.app.presentation.ui.screens</ID>
-    <ID>InvalidPackageDeclaration:HomeState.kt$package com.cinelink.app.presentation.states</ID>
-    <ID>InvalidPackageDeclaration:HomeViewModel.kt$package com.cinelink.app.presentation.viewmodels</ID>
-    <ID>InvalidPackageDeclaration:HttpClientFactory.kt$package com.cinelink.app.data.remote.api</ID>
-    <ID>InvalidPackageDeclaration:ImageUtils.kt$package com.cinelink.app.utils</ID>
-    <ID>InvalidPackageDeclaration:MainActivity.kt$package com.cinelink.app</ID>
-    <ID>InvalidPackageDeclaration:Movie.kt$package com.cinelink.app.domain.model</ID>
-    <ID>InvalidPackageDeclaration:MovieCard.kt$package com.cinelink.app.presentation.ui.components.movie</ID>
-    <ID>InvalidPackageDeclaration:MovieDetailScreen.kt$package com.cinelink.app.presentation.ui.screens</ID>
-    <ID>InvalidPackageDeclaration:MovieDetailState.kt$package com.cinelink.app.presentation.states</ID>
-    <ID>InvalidPackageDeclaration:MovieDetailViewModel.kt$package com.cinelink.app.presentation.viewmodels</ID>
-    <ID>InvalidPackageDeclaration:MovieDetails.kt$package com.cinelink.app.domain.model</ID>
-    <ID>InvalidPackageDeclaration:MovieDetailsDto.kt$package com.cinelink.app.data.remote.dto</ID>
-    <ID>InvalidPackageDeclaration:MovieDetailsIntent.kt$package com.cinelink.app.presentation.intents</ID>
-    <ID>InvalidPackageDeclaration:MovieDto.kt$package com.cinelink.app.data.remote.dto</ID>
-    <ID>InvalidPackageDeclaration:MovieMapper.kt$package com.cinelink.app.data.mapper</ID>
-    <ID>InvalidPackageDeclaration:MovieRepository.kt$package com.cinelink.app.domain.repository</ID>
-    <ID>InvalidPackageDeclaration:MovieRepositoryImpl.kt$package com.cinelink.app.data.repository</ID>
-    <ID>InvalidPackageDeclaration:MovieResponseDto.kt$package com.cinelink.app.data.remote.dto</ID>
-    <ID>InvalidPackageDeclaration:MoviesIntent.kt$package com.cinelink.app.presentation.intents</ID>
-    <ID>InvalidPackageDeclaration:MoviesScreen.kt$package com.cinelink.app.presentation.ui.screens</ID>
-    <ID>InvalidPackageDeclaration:MoviesState.kt$package com.cinelink.app.presentation.states</ID>
-    <ID>InvalidPackageDeclaration:MoviesViewModel.kt$package com.cinelink.app.presentation.viewmodels</ID>
-    <ID>InvalidPackageDeclaration:NavRoutes.kt$package com.cinelink.app.presentation.ui.navigation</ID>
-    <ID>InvalidPackageDeclaration:ProfileScreen.kt$package com.cinelink.app.presentation.ui.screens</ID>
-    <ID>InvalidPackageDeclaration:Review.kt$package com.cinelink.app.domain.model</ID>
-    <ID>InvalidPackageDeclaration:ReviewDto.kt$package com.cinelink.app.data.remote.dto</ID>
-    <ID>InvalidPackageDeclaration:ReviewResponseDto.kt$package com.cinelink.app.data.remote.dto</ID>
-    <ID>InvalidPackageDeclaration:SaveTicketUseCaseTest.kt$package com.cinelink.app</ID>
-    <ID>InvalidPackageDeclaration:SaveTicketUsecase.kt$package com.cinelink.app.domain.usecases.ticket</ID>
-    <ID>InvalidPackageDeclaration:Seat.kt$package com.cinelink.app.domain.model</ID>
-    <ID>InvalidPackageDeclaration:SeatSelectionIntent.kt$package com.cinelink.app.presentation.intents</ID>
-    <ID>InvalidPackageDeclaration:SeatSelectionScreen.kt$package com.cinelink.app.presentation.ui.screens</ID>
-    <ID>InvalidPackageDeclaration:SeatSelectionState.kt$package com.cinelink.app.presentation.states</ID>
-    <ID>InvalidPackageDeclaration:SeatSelectionViewModel.kt$package com.cinelink.app.presentation.viewmodels</ID>
-    <ID>InvalidPackageDeclaration:TMDBApiService.kt$package com.cinelink.app.data.remote.api</ID>
-    <ID>InvalidPackageDeclaration:TMDBApiServiceImpl.kt$package com.cinelink.app.data.remote.api</ID>
-    <ID>InvalidPackageDeclaration:Theme.kt$package com.cinelink.app.presentation.ui.theme</ID>
-    <ID>InvalidPackageDeclaration:Ticket.kt$package com.cinelink.app.domain.model</ID>
-    <ID>InvalidPackageDeclaration:TicketDao.kt$package com.cinelink.app.data.local.database</ID>
-    <ID>InvalidPackageDeclaration:TicketDetailScreen.kt$package com.cinelink.app.presentation.ui.screens</ID>
-    <ID>InvalidPackageDeclaration:TicketEntity.kt$package com.cinelink.app.data.local.database</ID>
-    <ID>InvalidPackageDeclaration:TicketRepository.kt$package com.cinelink.app.domain.repository</ID>
-    <ID>InvalidPackageDeclaration:TicketRepositoryImpl.kt$package com.cinelink.app.data.repository</ID>
-    <ID>InvalidPackageDeclaration:TicketsIntent.kt$package com.cinelink.app.presentation.intents</ID>
-    <ID>InvalidPackageDeclaration:TicketsScreen.kt$package com.cinelink.app.presentation.ui.screens</ID>
-    <ID>InvalidPackageDeclaration:TicketsState.kt$package com.cinelink.app.presentation.states</ID>
-    <ID>InvalidPackageDeclaration:TicketsViewModel.kt$package com.cinelink.app.presentation.viewmodels</ID>
-    <ID>InvalidPackageDeclaration:Type.kt$package com.cinelink.app.presentation.ui.theme</ID>
     <ID>LongMethod:BMSBottomBar.kt$@Composable fun BMSBottomBar(navController: NavController)</ID>
     <ID>LongMethod:BMSNavigation.kt$@Composable fun BMSNavigation()</ID>
+    <ID>LongMethod:BMSTopBar.kt$@OptIn (ExperimentalMaterial3Api::class) @Composable fun BMSTopBar( title: String = "Welcome Guest!", cityName: String = "Bengaluru", showBackButton: Boolean = false, onBackClick: () -&gt; Unit = {}, onSearchClick: () -&gt; Unit = {}, onNotificationClick: () -&gt; Unit = {}, onQrCodeClick: () -&gt; Unit = {} )</ID>
     <ID>LongMethod:BookingScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun BookingScreen( selectedSeats: List&lt;Seat&gt;, movieTitle: String, moviePoster: String? = null, onBackPressed: () -&gt; Unit, onBookingConfirmed: () -&gt; Unit, viewModel: BookingViewModel = koinViewModel() )</ID>
+    <ID>LongMethod:BookingViewModel.kt$BookingViewModel$private fun confirmBooking()</ID>
     <ID>LongMethod:BottomSheet.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun BottomSheet( onNavigateToSeatSelection: (Int) -&gt; Unit, modifier: Modifier = Modifier )</ID>
+    <ID>LongMethod:GetAllTicketsUseCaseTest.kt$GetAllTicketsUseCaseTest$@Test fun `when invoke should return flow of all tickets`()</ID>
+    <ID>LongMethod:GetMovieDetailsUseCaseTest.kt$GetMovieDetailsUseCaseTest$@Test fun `when invoke with valid movieId, should return movie details`()</ID>
     <ID>LongMethod:HomeScreen.kt$@Composable fun HomeScreen( onNavigateToMovie: (Int) -&gt; Unit, modifier: Modifier = Modifier, viewModel: HomeViewModel = koinViewModel() )</ID>
     <ID>LongMethod:MovieCard.kt$@Composable fun MovieCard(movie: Movie, onMovieClick: (Int) -&gt; Unit, modifier: Modifier = Modifier)</ID>
     <ID>LongMethod:MovieDetailScreen.kt$@SuppressLint("DefaultLocale") @Composable fun MovieDetailScreen( modifier: Modifier = Modifier, movieId: Int, onNavigateBack: () -&gt; Unit, onNavigateToSeatSelection: (MovieDetails, Int) -&gt; Unit = { _, _ -&gt; }, viewModel: MovieDetailViewModel = koinViewModel() )</ID>
+    <ID>LongMethod:MovieDetailViewModel.kt$MovieDetailViewModel$private fun loadReviews(movieId: Int)</ID>
     <ID>LongMethod:MoviesScreen.kt$@Composable fun MoviesScreen( onNavigateToMovie: (Int) -&gt; Unit, modifier: Modifier = Modifier, viewModel: MoviesViewModel = koinViewModel() )</ID>
     <ID>LongMethod:ProfileScreen.kt$@Composable fun ProfileMenuItemCard( item: ProfileMenuItem, modifier: Modifier = Modifier )</ID>
     <ID>LongMethod:ProfileScreen.kt$@Composable fun ProfileScreen( modifier: Modifier = Modifier )</ID>
+    <ID>LongMethod:SeatSelectionScreen.kt$@Composable fun BookingSummaryDialog(selectedSeats: List&lt;Seat&gt;, onProceed: () -&gt; Unit)</ID>
+    <ID>LongMethod:SeatSelectionScreen.kt$@Composable fun SeatItem(seat: Seat, onClick: () -&gt; Unit)</ID>
+    <ID>LongMethod:SeatSelectionScreen.kt$@Composable fun SeatLegend()</ID>
+    <ID>LongMethod:SeatSelectionScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun SeatSelectionScreen( movieDetails: MovieDetails, seatCount: Int, onBackPressed: () -&gt; Unit, onProceedToBooking: (List&lt;Seat&gt;) -&gt; Unit, viewModel: SeatSelectionViewModel = koinViewModel() )</ID>
+    <ID>LongMethod:TestClass.kt$TestClass$fun longMethod()</ID>
     <ID>LongMethod:TicketDetailScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun TicketDetailScreen( ticketId: String, onBackPressed: () -&gt; Unit, viewModel: TicketsViewModel = koinViewModel() )</ID>
     <ID>LongMethod:TicketsScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun TicketCard(ticket: Ticket, onClick: () -&gt; Unit = {})</ID>
     <ID>LongMethod:TicketsScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun TicketsScreen( onBackPressed: () -&gt; Unit = {}, onTicketClick: (String) -&gt; Unit = {}, viewModel: TicketsViewModel = koinViewModel() )</ID>
     <ID>LongParameterList:BMSTopBar.kt$( title: String = "Welcome Guest!", cityName: String = "Bengaluru", showBackButton: Boolean = false, onBackClick: () -&gt; Unit = {}, onSearchClick: () -&gt; Unit = {}, onNotificationClick: () -&gt; Unit = {}, onQrCodeClick: () -&gt; Unit = {} )</ID>
     <ID>LongParameterList:BookingScreen.kt$( selectedSeats: List&lt;Seat&gt;, movieTitle: String, moviePoster: String? = null, onBackPressed: () -&gt; Unit, onBookingConfirmed: () -&gt; Unit, viewModel: BookingViewModel = koinViewModel() )</ID>
+    <ID>LongParameterList:TestClass.kt$TestClass$( private val param1: String, private val param2: Int, private val param3: Boolean, private val param4: Double, private val param5: Float, private val param6: Long, private val param7: Byte, private val param8: Short, private val param9: Char, )</ID>
     <ID>MagicNumber:BookingScreen.kt$200</ID>
     <ID>MagicNumber:BookingScreen.kt$250</ID>
     <ID>MagicNumber:BottomSheet.kt$10</ID>
@@ -201,34 +132,35 @@
     <ID>MaxLineLength:MovieDetailViewModel.kt$MovieDetailViewModel$Log.d("MovieDetailViewModel", "Movie details loaded: ${movieDetails.movie.title}, initial reviews: ${movieDetails.reviews.size}")</ID>
     <ID>MaxLineLength:SeatSelectionViewModel.kt$SeatSelectionViewModel$if</ID>
     <ID>MaxLineLength:TicketDetailScreen.kt$0.1f</ID>
-    <ID>NewLineAtEndOfFile:AppModule.kt$com.cinelink.app.di.AppModule.kt</ID>
-    <ID>NewLineAtEndOfFile:BMSApplication.kt$com.cinelink.app.BMSApplication.kt</ID>
-    <ID>NewLineAtEndOfFile:BMSDatabase.kt$com.cinelink.app.data.local.database.BMSDatabase.kt</ID>
-    <ID>NewLineAtEndOfFile:BookingIntent.kt$com.cinelink.app.presentation.intents.BookingIntent.kt</ID>
-    <ID>NewLineAtEndOfFile:BookingState.kt$com.cinelink.app.presentation.states.BookingState.kt</ID>
-    <ID>NewLineAtEndOfFile:BookingViewModel.kt$com.cinelink.app.presentation.viewmodels.BookingViewModel.kt</ID>
-    <ID>NewLineAtEndOfFile:Cast.kt$com.cinelink.app.domain.model.Cast.kt</ID>
-    <ID>NewLineAtEndOfFile:DeleteTicketUseCase.kt$com.cinelink.app.domain.usecases.ticket.DeleteTicketUseCase.kt</ID>
-    <ID>NewLineAtEndOfFile:GetAllTicketsUseCase.kt$com.cinelink.app.domain.usecases.ticket.GetAllTicketsUseCase.kt</ID>
-    <ID>NewLineAtEndOfFile:GetMovieDetailsUseCase.kt$com.cinelink.app.domain.usecases.movie.GetMovieDetailsUseCase.kt</ID>
-    <ID>NewLineAtEndOfFile:GetMovieReviewsUseCase.kt$com.cinelink.app.domain.usecases.movie.GetMovieReviewsUseCase.kt</ID>
-    <ID>NewLineAtEndOfFile:GetMovieReviewsUseCaseTest.kt$com.cinelink.app.GetMovieReviewsUseCaseTest.kt</ID>
-    <ID>NewLineAtEndOfFile:GetNowPlayingMoviesUseCase.kt$com.cinelink.app.domain.usecases.movie.GetNowPlayingMoviesUseCase.kt</ID>
-    <ID>NewLineAtEndOfFile:GetPopularMoviesUseCase.kt$com.cinelink.app.domain.usecases.movie.GetPopularMoviesUseCase.kt</ID>
-    <ID>NewLineAtEndOfFile:GetTicketByIdUseCase.kt$com.cinelink.app.domain.usecases.ticket.GetTicketByIdUseCase.kt</ID>
-    <ID>NewLineAtEndOfFile:HomeViewModel.kt$com.cinelink.app.presentation.viewmodels.HomeViewModel.kt</ID>
-    <ID>NewLineAtEndOfFile:HttpClientFactory.kt$com.cinelink.app.data.remote.api.HttpClientFactory.kt</ID>
-    <ID>NewLineAtEndOfFile:ImageUtils.kt$com.cinelink.app.utils.ImageUtils.kt</ID>
-    <ID>NewLineAtEndOfFile:Movie.kt$com.cinelink.app.domain.model.Movie.kt</ID>
-    <ID>NewLineAtEndOfFile:MovieDetailViewModel.kt$com.cinelink.app.presentation.viewmodels.MovieDetailViewModel.kt</ID>
-    <ID>NewLineAtEndOfFile:MovieRepository.kt$com.cinelink.app.domain.repository.MovieRepository.kt</ID>
-    <ID>NewLineAtEndOfFile:MoviesViewModel.kt$com.cinelink.app.presentation.viewmodels.MoviesViewModel.kt</ID>
-    <ID>NewLineAtEndOfFile:SaveTicketUsecase.kt$com.cinelink.app.domain.usecases.ticket.SaveTicketUsecase.kt</ID>
-    <ID>NewLineAtEndOfFile:SeatSelectionState.kt$com.cinelink.app.presentation.states.SeatSelectionState.kt</ID>
-    <ID>NewLineAtEndOfFile:TMDBApiService.kt$com.cinelink.app.data.remote.api.TMDBApiService.kt</ID>
-    <ID>NewLineAtEndOfFile:TMDBApiServiceImpl.kt$com.cinelink.app.data.remote.api.TMDBApiServiceImpl.kt</ID>
-    <ID>NewLineAtEndOfFile:TicketDao.kt$com.cinelink.app.data.local.database.TicketDao.kt</ID>
-    <ID>NewLineAtEndOfFile:TicketRepository.kt$com.cinelink.app.domain.repository.TicketRepository.kt</ID>
+    <ID>NewLineAtEndOfFile:AppModule.kt$com.bms.clone.di.AppModule.kt</ID>
+    <ID>NewLineAtEndOfFile:BMSApplication.kt$com.bms.clone.BMSApplication.kt</ID>
+    <ID>NewLineAtEndOfFile:BMSDatabase.kt$com.bms.clone.data.local.database.BMSDatabase.kt</ID>
+    <ID>NewLineAtEndOfFile:BookingIntent.kt$com.bms.clone.presentation.intents.BookingIntent.kt</ID>
+    <ID>NewLineAtEndOfFile:BookingState.kt$com.bms.clone.presentation.states.BookingState.kt</ID>
+    <ID>NewLineAtEndOfFile:BookingViewModel.kt$com.bms.clone.presentation.viewmodels.BookingViewModel.kt</ID>
+    <ID>NewLineAtEndOfFile:Cast.kt$com.bms.clone.domain.model.Cast.kt</ID>
+    <ID>NewLineAtEndOfFile:DeleteTicketUseCase.kt$com.bms.clone.domain.usecases.ticket.DeleteTicketUseCase.kt</ID>
+    <ID>NewLineAtEndOfFile:ExampleInstrumentedTest.kt$com.bms.clone.ExampleInstrumentedTest.kt</ID>
+    <ID>NewLineAtEndOfFile:GetAllTicketsUseCase.kt$com.bms.clone.domain.usecases.ticket.GetAllTicketsUseCase.kt</ID>
+    <ID>NewLineAtEndOfFile:GetMovieDetailsUseCase.kt$com.bms.clone.domain.usecases.movie.GetMovieDetailsUseCase.kt</ID>
+    <ID>NewLineAtEndOfFile:GetMovieReviewsUseCase.kt$com.bms.clone.domain.usecases.movie.GetMovieReviewsUseCase.kt</ID>
+    <ID>NewLineAtEndOfFile:GetMovieReviewsUseCaseTest.kt$com.bms.clone.GetMovieReviewsUseCaseTest.kt</ID>
+    <ID>NewLineAtEndOfFile:GetNowPlayingMoviesUseCase.kt$com.bms.clone.domain.usecases.movie.GetNowPlayingMoviesUseCase.kt</ID>
+    <ID>NewLineAtEndOfFile:GetPopularMoviesUseCase.kt$com.bms.clone.domain.usecases.movie.GetPopularMoviesUseCase.kt</ID>
+    <ID>NewLineAtEndOfFile:GetTicketByIdUseCase.kt$com.bms.clone.domain.usecases.ticket.GetTicketByIdUseCase.kt</ID>
+    <ID>NewLineAtEndOfFile:HomeViewModel.kt$com.bms.clone.presentation.viewmodels.HomeViewModel.kt</ID>
+    <ID>NewLineAtEndOfFile:HttpClientFactory.kt$com.bms.clone.data.remote.api.HttpClientFactory.kt</ID>
+    <ID>NewLineAtEndOfFile:ImageUtils.kt$com.bms.clone.utils.ImageUtils.kt</ID>
+    <ID>NewLineAtEndOfFile:Movie.kt$com.bms.clone.domain.model.Movie.kt</ID>
+    <ID>NewLineAtEndOfFile:MovieDetailViewModel.kt$com.bms.clone.presentation.viewmodels.MovieDetailViewModel.kt</ID>
+    <ID>NewLineAtEndOfFile:MovieRepository.kt$com.bms.clone.domain.repository.MovieRepository.kt</ID>
+    <ID>NewLineAtEndOfFile:MoviesViewModel.kt$com.bms.clone.presentation.viewmodels.MoviesViewModel.kt</ID>
+    <ID>NewLineAtEndOfFile:SaveTicketUsecase.kt$com.bms.clone.domain.usecases.ticket.SaveTicketUsecase.kt</ID>
+    <ID>NewLineAtEndOfFile:SeatSelectionState.kt$com.bms.clone.presentation.states.SeatSelectionState.kt</ID>
+    <ID>NewLineAtEndOfFile:TMDBApiService.kt$com.bms.clone.data.remote.api.TMDBApiService.kt</ID>
+    <ID>NewLineAtEndOfFile:TMDBApiServiceImpl.kt$com.bms.clone.data.remote.api.TMDBApiServiceImpl.kt</ID>
+    <ID>NewLineAtEndOfFile:TicketDao.kt$com.bms.clone.data.local.database.TicketDao.kt</ID>
+    <ID>NewLineAtEndOfFile:TicketRepository.kt$com.bms.clone.domain.repository.TicketRepository.kt</ID>
     <ID>SwallowedException:BMSNavigation.kt$e: Exception</ID>
     <ID>SwallowedException:MovieRepositoryImpl.kt$MovieRepositoryImpl$e: Exception</ID>
     <ID>SwallowedException:TicketRepositoryImpl.kt$TicketRepositoryImpl$e: IllegalArgumentException</ID>
@@ -240,6 +172,15 @@
     <ID>TooGenericExceptionCaught:MoviesViewModel.kt$MoviesViewModel$e: Exception</ID>
     <ID>TooGenericExceptionCaught:SeatSelectionViewModel.kt$SeatSelectionViewModel$e: Exception</ID>
     <ID>TooGenericExceptionCaught:TicketsViewModel.kt$TicketsViewModel$e: Exception</ID>
+    <ID>UnusedPrivateProperty:TestClass.kt$TestClass$private val param1: String</ID>
+    <ID>UnusedPrivateProperty:TestClass.kt$TestClass$private val param2: Int</ID>
+    <ID>UnusedPrivateProperty:TestClass.kt$TestClass$private val param3: Boolean</ID>
+    <ID>UnusedPrivateProperty:TestClass.kt$TestClass$private val param4: Double</ID>
+    <ID>UnusedPrivateProperty:TestClass.kt$TestClass$private val param5: Float</ID>
+    <ID>UnusedPrivateProperty:TestClass.kt$TestClass$private val param6: Long</ID>
+    <ID>UnusedPrivateProperty:TestClass.kt$TestClass$private val param7: Byte</ID>
+    <ID>UnusedPrivateProperty:TestClass.kt$TestClass$private val param8: Short</ID>
+    <ID>UnusedPrivateProperty:TestClass.kt$TestClass$private val param9: Char</ID>
     <ID>WildcardImport:BookingScreen.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:BookingScreen.kt$import androidx.compose.material3.*</ID>
     <ID>WildcardImport:BookingScreen.kt$import androidx.compose.runtime.*</ID>
@@ -247,8 +188,9 @@
     <ID>WildcardImport:BottomSheet.kt$import androidx.compose.material3.*</ID>
     <ID>WildcardImport:BottomSheet.kt$import androidx.compose.runtime.*</ID>
     <ID>WildcardImport:DeleteTicketUseCaseTest.kt$import org.junit.Assert.*</ID>
+    <ID>WildcardImport:ExampleInstrumentedTest.kt$import org.junit.Assert.*</ID>
     <ID>WildcardImport:GetAllTicketsUseCaseTest.kt$import org.junit.Assert.*</ID>
-    <ID>WildcardImport:GetMovieDetailsUseCaseTest.kt$import com.cinelink.app.domain.model.*</ID>
+    <ID>WildcardImport:GetMovieDetailsUseCaseTest.kt$import com.bms.clone.domain.model.*</ID>
     <ID>WildcardImport:GetMovieDetailsUseCaseTest.kt$import org.junit.Assert.*</ID>
     <ID>WildcardImport:GetNowPlayingMoviesUseCaseTest.kt$import org.junit.Assert.*</ID>
     <ID>WildcardImport:GetPopularMoviesUseCaseTest.kt$import org.junit.Assert.*</ID>
