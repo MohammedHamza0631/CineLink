@@ -1,3 +1,5 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -19,6 +21,22 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        
+        val localProperties = File(rootProject.projectDir, "local.properties")
+        val properties = Properties()
+        if (localProperties.exists()) {
+            properties.load(localProperties.inputStream())
+        }
+        
+        val tmdbApiKey = properties.getProperty("TMDB_API_KEY") 
+            ?: System.getenv("TMDB_API_KEY") 
+            ?: "YOUR_TMDB_API_KEY"
+        val tmdbAccessToken = properties.getProperty("TMDB_ACCESS_TOKEN") 
+            ?: System.getenv("TMDB_ACCESS_TOKEN") 
+            ?: "YOUR_TMDB_ACCESS_TOKEN"
+        
+        buildConfigField("String", "TMDB_API_KEY", "\"$tmdbApiKey\"")
+        buildConfigField("String", "TMDB_ACCESS_TOKEN", "\"$tmdbAccessToken\"")
     }
 
     buildTypes {
@@ -31,14 +49,15 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "11"
+        jvmTarget = "17"
     }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
 }
 
@@ -48,6 +67,7 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.androidx.lifecycle.viewmodel.compose)
     implementation(libs.androidx.activity.compose)
+    implementation(libs.orbit.compose)
 
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.ui)

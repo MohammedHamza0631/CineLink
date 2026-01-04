@@ -1,9 +1,11 @@
 package com.bms.clone.utils
 
+import com.bms.clone.BuildConfig
+
 object ApiConstants {
     const val BASE_URL = "https://api.themoviedb.org/3/"
-    const val API_KEY = "YOUR_TMDB_API_KEY"
-    const val ACCESS_TOKEN = "YOUR_TMDB_TOKEN"
+    val API_KEY = BuildConfig.TMDB_API_KEY
+    val ACCESS_TOKEN = BuildConfig.TMDB_ACCESS_TOKEN
     const val REGION = "IN"
     const val LANGUAGE = "en-US"
 }

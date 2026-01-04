@@ -9,10 +9,11 @@ composeBom = "2024.09.00"
 
 # Networking & Serialization
 ktor = "3.0.1"
+orbitCompose = "10.0.0"
 serialization = "1.7.3"
 
 # Database & Storage
-room = "2.6.1"
+room = "2.7.0-alpha05"
 datastore = "1.1.2"
 
 # Navigation & UI
@@ -88,6 +89,7 @@ androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "j
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 mockk = { group = "io.mockk", name = "mockk", version.ref = "mockk" }
 kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutinesTest" }
+orbit-compose = { module = "org.orbit-mvi:orbit-compose", version.ref = "orbitCompose" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

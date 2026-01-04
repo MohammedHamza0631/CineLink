@@ -1,0 +1,7 @@
+# Android SDK location (this line should already exist)
+sdk.dir=/Users/YOUR_USERNAME/Library/Android/sdk
+
+# TMDB API Credentials
+# Get these from https://www.themoviedb.org/settings/api
+TMDB_API_KEY=your_tmdb_api_key_here
+TMDB_ACCESS_TOKEN=your_tmdb_access_token_here
