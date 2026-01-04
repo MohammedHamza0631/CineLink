@@ -10,6 +10,7 @@ on:
     branches: [ main, master ]
   pull_request:
     branches: [ main, master ]
+  workflow_dispatch:
 
 jobs:
   build:
@@ -43,16 +44,16 @@ jobs:
         name: app-debug
         path: app/build/outputs/apk/debug/app-debug.apk
         
-    # Create release only on push to main/master (not on PRs)
+    # Create release only on push to main/master or manual trigger (not on PRs)
     - name: Get version info
-      if: github.event_name == 'push'
+      if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
       id: version
       run: |
         echo "VERSION=v1.0.${{ github.run_number }}" >> $GITHUB_OUTPUT
         echo "DATE=$(date +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_OUTPUT
         
     - name: Create Release
-      if: github.event_name == 'push'
+      if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
       uses: softprops/action-gh-release@v1
       with:
         tag_name: ${{ steps.version.outputs.VERSION }}
