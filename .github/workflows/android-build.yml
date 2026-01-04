@@ -1,5 +1,10 @@
 name: Android CI/CD
 
+run-name: Build #${{ github.run_number }} - ${{ github.event_name == 'push' && 'Release' || 'PR Check' }}
+
+permissions:
+  contents: write
+
 on:
   push:
     branches: [ main, master ]
