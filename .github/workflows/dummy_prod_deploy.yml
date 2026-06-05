@@ -1,0 +1,11 @@
+name: Dummy Prod Deploy (Testing Only)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Simulate successful prod deploy
+        run: echo "Dummy prod deploy succeeded."

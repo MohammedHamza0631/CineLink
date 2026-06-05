@@ -1,0 +1,96 @@
+name: Auto Draft Release Notes
+
+on:
+  workflow_run:
+    workflows: ["Dummy Prod Deploy (Testing Only)"]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  create-draft-release:
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Read version from build.gradle.kts
+        id: version
+        run: |
+          VERSION_NAME=$(grep 'versionName = ' app/build.gradle.kts | sed 's/.*"\(.*\)".*/\1/')
+          VERSION_CODE=$(grep 'versionCode = ' app/build.gradle.kts | grep -o '[0-9]\+' | head -1)
+          TAG="v${VERSION_NAME}"
+          echo "version_name=${VERSION_NAME}" >> $GITHUB_OUTPUT
+          echo "version_code=${VERSION_CODE}" >> $GITHUB_OUTPUT
+          echo "tag=${TAG}" >> $GITHUB_OUTPUT
+          echo "Detected: v${VERSION_NAME} (${VERSION_CODE})"
+
+      - name: Compute week label
+        id: label
+        run: |
+          WEEK_LABEL="$(date +%Y)$(date +%b)W$(date +%V)"
+          echo "week_label=${WEEK_LABEL}" >> $GITHUB_OUTPUT
+          echo "Week label: ${WEEK_LABEL}"
+
+      - name: Generate release notes via GitHub API
+        id: notes
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          NOTES=$(gh api \
+            --method POST \
+            -H "Accept: application/vnd.github+json" \
+            /repos/${{ github.repository }}/releases/generate-notes \
+            -f tag_name="${{ steps.version.outputs.tag }}" \
+            -f target_commitish="main" \
+            --jq '.body')
+          {
+            echo 'notes<<EOF'
+            printf '%s\n' "$NOTES"
+            echo 'EOF'
+          } >> $GITHUB_OUTPUT
+
+      - name: Create or update draft release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NOTES: ${{ steps.notes.outputs.notes }}
+        run: |
+          TAG="${{ steps.version.outputs.tag }}"
+          TITLE="${{ steps.label.outputs.week_label }} CineLink v${{ steps.version.outputs.version_name }}(${{ steps.version.outputs.version_code }})"
+
+          {
+            printf 'JIRA\n'
+            printf 'https://buildrapido.atlassian.net/issues/?filter=REPLACE_WITH_FILTER_ID\n'
+            printf '\n'
+            printf '%s\n' "$NOTES"
+          } > /tmp/release-notes.md
+
+          EXISTING=$(gh release view "$TAG" --json isDraft 2>/dev/null || echo "")
+
+          if [ -n "$EXISTING" ]; then
+            IS_DRAFT=$(echo "$EXISTING" | jq -r '.isDraft')
+            if [ "$IS_DRAFT" = "true" ]; then
+              echo "Updating existing draft release ${TAG}..."
+              gh release edit "$TAG" \
+                --title "$TITLE" \
+                --notes-file /tmp/release-notes.md
+              echo "Draft release updated."
+            else
+              echo "Release ${TAG} is already published. Skipping."
+            fi
+          else
+            echo "Creating new draft release ${TAG}..."
+            gh release create "$TAG" \
+              --title "$TITLE" \
+              --notes-file /tmp/release-notes.md \
+              --draft \
+              --target main
+            echo "Draft release created."
+          fi

@@ -5,6 +5,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material.icons.filled.Star
+import androidx.compose.material.icons.filled.ShoppingCart
 import androidx.compose.ui.graphics.vector.ImageVector
 import com.bms.clone.R
 
@@ -39,5 +40,11 @@ sealed class BottomNavItem (
         title = "Profile",
         route = Screen.Profile.route,
         icon = Icons.Default.Person
+    )
+
+    object Card : BottomNavItem(
+        title = "Card",
+        route = Screen.Card.route,
+        icon = Icons.Default.ShoppingCart
     )
 }

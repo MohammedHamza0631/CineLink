@@ -23,6 +23,7 @@ import com.bms.clone.presentation.ui.screens.MoviesScreen
 import com.bms.clone.presentation.ui.screens.ProfileScreen
 import com.bms.clone.presentation.ui.screens.SeatSelectionScreen
 import com.bms.clone.presentation.ui.screens.TicketDetailScreen
+import com.bms.clone.presentation.ui.screens.CardScreen
 import com.bms.clone.presentation.ui.screens.TicketsScreen
 import java.net.URLDecoder
 import java.net.URLEncoder
@@ -41,6 +42,7 @@ fun BMSNavigation() {
                         currentDestination?.route == Screen.MovieDetail.route -> false
                         currentDestination?.route == Screen.Movies.route -> false
                         currentDestination?.route == Screen.Profile.route -> false
+                        currentDestination?.route == Screen.Card.route -> false
                         currentDestination?.route?.startsWith("seat_selection") == true -> false
                         currentDestination?.route?.startsWith("booking") == true -> false
                         currentDestination?.route == Screen.Tickets.route -> false
@@ -96,6 +98,8 @@ fun BMSNavigation() {
                         }
 
                         composable(Screen.Profile.route) { ProfileScreen() }
+
+                        composable(Screen.Card.route) { CardScreen() }
 
                         composable(
                                 Screen.MovieDetail.route,

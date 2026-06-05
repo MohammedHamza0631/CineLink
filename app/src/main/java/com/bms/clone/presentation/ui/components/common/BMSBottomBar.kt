@@ -26,7 +26,8 @@ fun BMSBottomBar(navController: NavController) {
                     BottomNavItem.Home,
                     BottomNavItem.Movies,
                     BottomNavItem.Tickets,
-                    BottomNavItem.Profile
+                    BottomNavItem.Profile,
+                    BottomNavItem.Card
             )
 
     val navBackStackEntry by navController.currentBackStackEntryAsState()

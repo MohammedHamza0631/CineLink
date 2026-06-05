@@ -17,6 +17,10 @@ val BmsGray = Color(0xFF808080)
 val BmsLightGray = Color(0xFFF8F8F8)
 val BmsAccent = Color(0xFFFF6B35)
 
+val CardGradientStart = Color(0xFFF9F8FD)
+val CardGradientMiddle = Color(0xFFF0F7FF)
+val CardGradientEnd = Color(0xFFF9F8FD)
+
 object BMSColors {
     val primary = BmsRed
     val primaryLight = BmsRedLight
